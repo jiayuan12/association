@@ -16,13 +16,10 @@ import java.util.List;
  * <p>
  * 前端控制器
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 @RestController
 @RequestMapping("/fileTypes")
-@Api(value = "社团管理系统后台文件类型管理接口",tags = "社团管理系统后台文件类型管理接口")
+@Api(value = "协会管理系统后台文件类型管理接口",tags = "协会管理系统后台文件类型管理接口")
 public class FileTypeController {
     @Autowired
     private FileTypeService fileTypeService;
