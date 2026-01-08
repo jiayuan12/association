@@ -15,9 +15,6 @@ import java.util.Map;
  * <p>
  * 服务类
  * </p>
- *
- * @author rf
- * @since 2019-04-14
  */
 public interface NewUserService extends IService<NewUser> {
     NewUserVo getTopN(int n, NewUser search);

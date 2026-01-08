@@ -11,9 +11,6 @@ import java.util.Map;
  * <p>
  *  Mapper 接口
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 
 public interface UserMapper extends BaseMapper<User> {

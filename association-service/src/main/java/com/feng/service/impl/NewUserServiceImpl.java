@@ -37,9 +37,6 @@ import java.util.Map;
  * <p>
  * 服务实现类
  * </p>
- *
- * @author rf
- * @since 2019-04-14
  */
 @Service
 public class NewUserServiceImpl extends ServiceImpl<NewUserMapper, NewUser> implements NewUserService {

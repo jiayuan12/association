@@ -6,9 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import java.util.Properties;
 
-/**
- * Created by rf on 2019/4/14.
- */
+
 @Configuration
 public class KaptchaConfig {
     @Bean

@@ -2,9 +2,6 @@ package com.feng.enums;
 
 import com.feng.error.CommonError;
 
-/**
- * Created by rf on 2019/3/10.
- */
 public enum ErrorEnum implements CommonError {
     UN_KNOW_EXCEPTION(1001, "系统繁忙，请稍后访问！"),
     RESET_ERROR(1002, "昨天签到已重置，请问再次操作"),

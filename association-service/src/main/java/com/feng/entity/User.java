@@ -19,9 +19,6 @@ import java.util.Date;
  * <p>
  * 
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class User implements Serializable {

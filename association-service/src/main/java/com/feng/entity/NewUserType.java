@@ -11,9 +11,6 @@ import java.io.Serializable;
  * <p>
  * 
  * </p>
- *
- * @author rf
- * @since 2019-04-14
  */
 @Data
 public class NewUserType implements Serializable {

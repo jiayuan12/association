@@ -3,9 +3,6 @@ package com.feng.util;
 import com.feng.entity.ResponseResult;
 import com.feng.error.CommonError;
 
-/**
- * Created by rf on 2019/3/4.
- */
 public class ResponseResultUtil {
     public  static ResponseResult renderSuccess(Object data) {
         return renderSuccess(200,data);

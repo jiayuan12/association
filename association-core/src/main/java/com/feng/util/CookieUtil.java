@@ -4,9 +4,6 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Created by rf on 2019/5/4.
- */
 public class CookieUtil {
     public static String getCookie(HttpServletRequest request, String cookieName){
 

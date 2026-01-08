@@ -8,9 +8,6 @@ import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.DbType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
-/**
- * Created by rf on 2019/2/27.
- */
 public class Generator {
     public static void main(String[] args) {
         //指定包名

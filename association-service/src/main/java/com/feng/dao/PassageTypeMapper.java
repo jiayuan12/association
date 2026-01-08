@@ -9,9 +9,6 @@ import org.springframework.stereotype.Repository;
  * <p>
  *  Mapper 接口
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 
 public interface PassageTypeMapper extends BaseMapper<PassageType> {

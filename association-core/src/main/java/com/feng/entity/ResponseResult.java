@@ -3,9 +3,6 @@ package com.feng.entity;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
-/**
- * Created by rf on 2019/3/4.
- */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResponseResult{

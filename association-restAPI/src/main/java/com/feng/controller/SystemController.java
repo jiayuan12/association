@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
 
-/**
- * Created by rf on 2019/5/10.
- */
 @RestController
 @RequestMapping("/system")
 @ApiIgnore

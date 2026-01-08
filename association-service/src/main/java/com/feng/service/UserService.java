@@ -12,9 +12,6 @@ import java.util.Map;
  * <p>
  * 服务类
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 public interface UserService{
     PageInfo<User> getUserPage(int num, int size,User search);

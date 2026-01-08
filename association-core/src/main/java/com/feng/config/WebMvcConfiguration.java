@@ -9,9 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Created by rf on 2019/3/29.
- */
+
 @Configuration
 public class WebMvcConfiguration implements WebMvcConfigurer {
     @Override

@@ -17,9 +17,6 @@ import java.io.Serializable;
  * <p>
  * <p>
  * </p>
- *
- * @author rf
- * @since 2019-04-26
  */
 @Data
 public class Activity implements Serializable {

@@ -4,9 +4,6 @@ package com.feng.util;
 
 import java.util.UUID;
 
-/**
- * Created by rf on 2019/5/3.
- */
 public class UUIDUtil {
     public static String getUUID(){
         return UUID.randomUUID().toString().replace("-", "");

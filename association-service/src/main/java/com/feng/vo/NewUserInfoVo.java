@@ -7,9 +7,6 @@ import lombok.Data;
 
 import java.util.List;
 
-/**
- * Created by rf on 2019/5/3.
- */
 @Data
 public class NewUserInfoVo extends NewUser {
     private NewUserType newUserType;

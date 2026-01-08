@@ -34,9 +34,6 @@ import java.util.Map;
  * <p>
  * 服务实现类
  * </p>
- *
- * @author rf
- * @since 2019-04-08
  */
 @Service
 public class ActivityServiceImpl extends ServiceImpl<ActivityMapper, Activity> implements ActivityService {

@@ -15,9 +15,6 @@ import java.util.Date;
  * <p>
  * <p>
  * </p>
- *
- * @author rf
- * @since 2019-03-04
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)

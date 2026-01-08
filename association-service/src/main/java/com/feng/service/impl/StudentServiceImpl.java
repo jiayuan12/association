@@ -10,9 +10,6 @@ import org.springframework.stereotype.Service;
  * <p>
  *  服务实现类
  * </p>
- *
- * @author rf
- * @since 2019-04-14
  */
 @Service
 public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> implements StudentService {

@@ -3,9 +3,6 @@ package com.feng.exception;
 import com.feng.enums.ErrorEnum;
 import com.feng.error.CommonError;
 
-/**
- * Created by rf on 2019/4/23.
- */
 public class AuthenticationFailException extends RuntimeException implements CommonError {
     private int code;
     private String msg;

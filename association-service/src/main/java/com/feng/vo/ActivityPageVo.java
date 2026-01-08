@@ -5,9 +5,6 @@ import com.feng.entity.ActivityType;
 import com.github.pagehelper.PageInfo;
 import lombok.Data;
 
-/**
- * Created by rf on 2019/4/18.
- */
 @Data
 public class ActivityPageVo {
     private ActivityType activityType;

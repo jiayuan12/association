@@ -17,9 +17,6 @@ import java.util.List;
  * <p>
  * 留言服务实现类
  * </p>
- *
- * @author robotics club
- * @since 2024
  */
 @Service
 public class MessageServiceImpl implements MessageService {

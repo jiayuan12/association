@@ -16,9 +16,6 @@ import java.util.Map;
  * <p>
  * 服务类
  * </p>
- *
- * @author rf
- * @since 2019-04-08
  */
 public interface ActivityService extends IService<Activity> {
     ActivityVo getTopN(int n, Activity search);

@@ -7,9 +7,6 @@ import com.feng.entity.FileType;
  * <p>
  *  服务类
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 public interface FileTypeService extends IService<FileType> {
 

@@ -23,9 +23,6 @@ import javax.validation.Valid;
  * <p>
  * 前端控制器
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 @RestController
 @Slf4j

@@ -5,9 +5,6 @@ import com.feng.entity.NewUserType;
 import com.github.pagehelper.PageInfo;
 import lombok.Data;
 
-/**
- * Created by rf on 2019/4/18.
- */
 @Data
 public class NewUserPageVo {
     private NewUserType newUserType;

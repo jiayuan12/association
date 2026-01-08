@@ -15,9 +15,6 @@ import java.util.Date;
  * <p>
  * 
  * </p>
- *
- * @author rf
- * @since 2019-04-17
  */
 @Data
 public class NewUser implements Serializable {

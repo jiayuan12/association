@@ -13,9 +13,6 @@ import java.io.Serializable;
  * <p>
  * 服务类
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 public interface PassageService {
     PassageVo getTopN(int n, Passage search);

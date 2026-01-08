@@ -7,9 +7,6 @@ import org.springframework.stereotype.Component;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by rf on 2019/4/23.
- */
 
 @Component
 public class RedisOperatorService {

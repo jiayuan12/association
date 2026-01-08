@@ -9,9 +9,6 @@ import java.io.Serializable;
  * <p>
  * 
  * </p>
- *
- * @author rf
- * @since 2019-04-08
  */
 public class OneColumn implements Serializable {
 

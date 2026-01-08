@@ -12,9 +12,6 @@ import java.util.Map;
  * <p>
  *  Mapper 接口
  * </p>
- *
- * @author rf
- * @since 2019-04-14
  */
 public interface NewUserMapper extends BaseMapper<NewUser> {
     List<NewUserInfoVo> findNewUser(NewUser newUser);

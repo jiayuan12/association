@@ -9,9 +9,6 @@ import java.io.Serializable;
  * <p>
  * 
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 public class UserRank implements Serializable {
 

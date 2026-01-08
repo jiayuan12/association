@@ -13,9 +13,6 @@ import java.util.Map;
  * <p>
  *  Mapper 接口
  * </p>
- *
- * @author rf
- * @since 2019-04-08
  */
 public interface ActivityMapper extends BaseMapper<Activity> {
     List<ActivityTypeDto> findActivity(Activity activity);

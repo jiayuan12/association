@@ -10,9 +10,6 @@ import org.springframework.stereotype.Service;
  * <p>
  *  服务实现类
  * </p>
- *
- * @author rf
- * @since 2019-04-08
  */
 @Service
 public class OneColumnServiceImpl extends ServiceImpl<OneColumnMapper, OneColumn> implements OneColumnService {

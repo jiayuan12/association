@@ -11,9 +11,7 @@ import org.springframework.stereotype.Component;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
-/**
- * Created by rf on 2019/3/30.
- */
+
 @Component
 @Slf4j
 //@ImportResource("application.properties")

@@ -6,9 +6,6 @@ import lombok.Data;
 
 import java.util.List;
 
-/**
- * Created by rf on 2019/4/18.
- */
 @Data
 public class PassageVo{
     private PassageType passageType;

@@ -11,9 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 
-/**
- * Created by rf on 2019/5/5.
- */
 @RestController
 @Api(tags = "系统前台文件下载接口")
 public class FileDownLoadController {

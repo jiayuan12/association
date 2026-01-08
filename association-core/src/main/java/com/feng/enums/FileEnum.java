@@ -1,8 +1,5 @@
 package com.feng.enums;
 
-/**
- * Created by rf on 2019/4/27.
- */
 
 public enum FileEnum {
     COMMON_IMG(1, "普通图片"),

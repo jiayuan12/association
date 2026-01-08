@@ -10,9 +10,6 @@ import org.springframework.stereotype.Service;
  * <p>
  *  服务实现类
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 @Service
 public class PassageTypeServiceImpl extends ServiceImpl<PassageTypeMapper, PassageType> implements PassageTypeService {

@@ -9,9 +9,6 @@ import java.io.Serializable;
  * <p>
  * Mapper 接口
  * </p>
- *
- * @author rf
- * @since 2019-04-08
  */
 public interface FileMapper extends BaseMapper<File> {
     Integer save(File file);

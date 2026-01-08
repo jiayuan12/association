@@ -21,9 +21,6 @@ import java.util.List;
  * <p>
  *  服务实现类
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 @Service
 public class ActivityTypeServiceImpl extends ServiceImpl<ActivityTypeMapper, ActivityType> implements ActivityTypeService {
