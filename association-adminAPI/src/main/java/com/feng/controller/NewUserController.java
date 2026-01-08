@@ -35,7 +35,7 @@ import java.util.Map;
 @RestController
 @CrossOrigin
 @RequestMapping("/newUsers")
-@Api(value = "社团管理系统后台文章管理接口",tags = "社团管理系统后台文章管理接口")
+@Api(value = "协会管理系统后台新人管理接口",tags = "协会管理系统后台新人管理接口")
 public class NewUserController {
     @Autowired
     private NewUserService newUserService;

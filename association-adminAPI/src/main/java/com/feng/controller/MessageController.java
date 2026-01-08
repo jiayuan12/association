@@ -19,14 +19,11 @@ import javax.validation.Valid;
  * <p>
  * 留言板管理接口
  * </p>
- *
- * @author rf
- * @since 2024-12-19
  */
 @RestController
 @CrossOrigin
 @RequestMapping("/messages")
-@Api(tags = "社团管理系统后台留言板管理接口", value = "社团管理系统后台留言板管理接口")
+@Api(tags = "协会管理系统后台留言板管理接口", value = "协会管理系统后台留言板管理接口")
 public class MessageController {
 
     @Autowired

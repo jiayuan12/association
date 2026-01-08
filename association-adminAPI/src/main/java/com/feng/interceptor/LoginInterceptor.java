@@ -24,9 +24,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 
-/**
- * Created by rf on 2019/4/23.
- */
 @Slf4j
 @Component
 public class LoginInterceptor implements HandlerInterceptor {
