@@ -6,6 +6,7 @@ import com.feng.entity.ResponseResult;
 import com.feng.service.EquipmentService;
 import com.feng.util.ResponseResultUtil;
 import com.github.pagehelper.PageInfo;
+import io.swagger.annotations.Api;
 import org.apache.poi.ss.formula.functions.Now;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/equipments")
+@Api(value = "协会管理系统后台设备管理接口",tags = "协会管理系统后台设备管理接口")
 public class EquipmentController {
     @Autowired
     private EquipmentService equipmentService;
