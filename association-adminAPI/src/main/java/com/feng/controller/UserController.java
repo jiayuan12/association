@@ -34,15 +34,12 @@ import java.util.Map;
  * <p>
  * 前端控制器
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 @RestController
 @RequestMapping("/users")
 @Slf4j
 @CrossOrigin(allowCredentials = "true")
-@Api(value = "社团管理系统后台用户管理接口",tags = "社团管理系统后台用户管理接口")
+@Api(value = "协会管理系统后台用户管理接口",tags = "协会管理系统后台用户管理接口")
 public class UserController {
     @Autowired
     private UserService userService;

@@ -22,14 +22,11 @@ import javax.validation.Valid;
  * <p>
  * 前端控制器
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 @RestController
 @CrossOrigin
 @RequestMapping("/passages")
-@Api(value = "社团管理系统后台文章管理接口",tags = "社团管理系统后台文章管理接口")
+@Api(value = "协会管理系统后台文章管理接口",tags = "协会管理系统后台文章管理接口")
 public class PassageController {
     @Autowired
     private PassageService passageService;
