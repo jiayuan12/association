@@ -21,9 +21,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 
-/**
- * Created by rf on 2019/4/14.
- */
 @Controller
 @CrossOrigin(allowCredentials = "true")
 @RequestMapping("/users")
