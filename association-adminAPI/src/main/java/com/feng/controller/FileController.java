@@ -18,7 +18,7 @@ import javax.validation.Valid;
 @RestController
 @CrossOrigin
 @RequestMapping("/files")
-@Api(value = "社团管理系统后台文件管理文档接口",tags = "社团管理系统后台文件管理文档接口")
+@Api(value = "协会管理系统后台文件管理文档接口",tags = "协会管理系统后台文件管理文档接口")
 public class FileController {
     @Autowired
     private FileService fileService;
