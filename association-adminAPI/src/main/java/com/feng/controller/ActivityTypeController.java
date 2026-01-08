@@ -16,13 +16,10 @@ import java.util.List;
  * <p>
  * 前端控制器
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 @RestController
 @RequestMapping("/activityTypes")
-@Api(value = "社团管理系统后台活动类型管理接口",tags = "社团管理系统后台活动类型管理接口")
+@Api(value = "协会管理系统后台活动类型管理接口",tags = "协会管理系统后台活动类型管理接口")
 public class ActivityTypeController {
     @Autowired
     private ActivityTypeService activityTypeService;
