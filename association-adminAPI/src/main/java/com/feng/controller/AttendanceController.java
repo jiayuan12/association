@@ -7,6 +7,7 @@ import com.feng.enums.ErrorEnum;
 import com.feng.service.AttendanceService;
 import com.feng.util.ResponseResultUtil;
 import com.github.pagehelper.PageInfo;
+import io.swagger.annotations.Api;
 import io.swagger.models.auth.In;
 import lombok.var;
 import org.apache.poi.ss.usermodel.*;
@@ -21,6 +22,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/attendances")
+@Api(value = "协会管理系统后台每日签到管理接口",tags = "协会管理系统后台每日签到管理接口")
 public class AttendanceController {
 
     @Autowired
