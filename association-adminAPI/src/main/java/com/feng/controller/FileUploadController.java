@@ -18,9 +18,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Created by rf on 2019/4/26.
- */
 @RestController
 @RequestMapping("/files")
 @Slf4j
