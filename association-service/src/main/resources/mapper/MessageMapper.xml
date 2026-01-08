@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.feng.dao.MessageMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.feng.entity.Message">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="content" property="content" />
+        <result column="contact" property="contact" />
+        <result column="create_time" property="createTime" />
+        <result column="status" property="status" />
+        <result column="ip" property="ip" />
+    </resultMap>
+    <insert id="insert" parameterType="com.feng.entity.Message">
+        insert into message(name, content, contact, status, ip)
+        values(#{name}, #{content}, #{contact}, #{status}, #{ip})
+    </insert>
+
+    <update id="updateStatus" parameterType="com.feng.entity.Message">
+        update message
+        set
+            <if test="status != null">
+                status = #{status}
+            </if>
+        where id = #{id}
+    </update>
+    <delete id="deleteById" parameterType="java.lang.Long">
+        delete from message where id = #{id}
+    </delete>
+
+    <select id="getPublishedMessages" resultType="com.feng.entity.Message">
+        select * from message where status = 1
+    </select>
+
+    <select id="findActivity" resultType="com.feng.entity.Message" parameterType="com.feng.entity.Message">
+        select * from message
+            WHERE
+            1 > 0
+            <if test="name != null">
+                AND name LIKE CONCAT('%', #{name},'%')
+            </if>
+            <if test="contact != null">
+                AND content LIKE CONCAT('%', #{contact},'%')
+            </if>
+         ORDER BY create_time DESC
+    </select>
+
+    <select id="selectById" resultType="com.feng.entity.Message" parameterType="java.lang.Long">
+        select * from message where id = #{id}
+    </select>
+
+
+</mapper>

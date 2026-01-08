@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.feng.dao.AttendanceMapper">
+    <resultMap id="BaseResultMap" type="com.feng.entity.Attendance">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="status" property="status" />
+        <result column="attendance_time" property="attendanceTime" />
+        <result column="remark" property="remark" />
+        <result column="name" property="name" />
+        <result column="sex" property="sex" />
+        <result column="class_name" property="className" />
+        <result column="grade" property="grade" />
+    </resultMap>
+    <insert id="insert" parameterType="com.feng.entity.Attendance">
+        INSERT INTO attendance (
+            user_id,
+            status,
+            attendance_time,
+            remark
+        ) VALUES (
+                     #{userId},
+                     #{status},
+                     #{attendanceTime},
+                     #{remark}
+                 )
+    </insert>
+
+    <update id="updateById" parameterType="com.feng.entity.Attendance">
+        UPDATE attendance
+        SET
+            status = #{status},
+            attendance_time = #{attendanceTime},
+            remark = #{remark},
+            update_time = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <update id="update" parameterType="map">
+        UPDATE attendance
+        SET
+            status = #{status},
+            attendance_time = NOW(),
+            remark = #{remark}
+        WHERE user_id = #{userId}
+    </update>
+    <update id="resetAll">
+
+    </update>
+
+    <update id="updateBatchById" parameterType="java.util.List">
+        UPDATE attendance
+        SET
+        status = CASE
+        <foreach collection="list" item="item">
+            WHEN id = #{item.id} THEN #{item.status}
+        </foreach>
+        END,
+        attendance_time = CASE
+        <foreach collection="list" item="item">
+            WHEN id = #{item.id} THEN #{item.attendanceTime}
+        </foreach>
+        END,
+        remark = CASE
+        <foreach collection="list" item="item">
+            WHEN id = #{item.id} THEN #{item.remark}
+        </foreach>
+        END
+        WHERE id IN
+        <foreach collection="list" item="item" open="(" separator="," close=")">
+            #{item.id}
+        </foreach>
+    </update>
+    <delete id="BatchDelete">
+        DELETE a
+        FROM attendance a
+        JOIN user u ON a.user_id = u.id
+        <where>
+            <if test="name != null and name != ''">
+                AND u.name = #{name}
+            </if>
+            <if test="className != null and className != ''">
+                AND u.class_name = #{className}
+            </if>
+            <if test="grade != null and grade != ''">
+                AND u.grade = #{grade}
+            </if>
+        </where>
+    </delete>
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        delete from attendance
+        WHERE id = #{id}
+    </delete>
+
+
+    <select id="selectByUserId" resultType="com.feng.entity.Attendance" parameterType="java.lang.Integer">
+        SELECT
+            a.id,
+            a.user_id,
+            a.status,
+            a.attendance_time,
+            a.remark
+        FROM attendance a
+        WHERE a.user_id = #{userId}
+    </select>
+
+    <select id="selectAllWithUser" resultType="com.feng.entity.Attendance">
+        SELECT
+            u.id,
+            u.name,
+            u.sex,
+            u.class_name,
+            u.grade,
+            a.status,
+            a.attendance_time,
+            a.remark
+        FROM attendance a
+                 LEFT JOIN user u ON a.user_id = u.id
+        ORDER BY u.id
+    </select>
+
+    <select id="searchAttendance" resultType="com.feng.entity.Attendance">
+        SELECT
+        u.id,
+        u.name,
+        u.sex,
+        u.class_name,
+        u.grade,
+        a.status,
+        a.attendance_time,
+        a.remark
+        FROM attendance a
+        LEFT JOIN user u ON a.user_id = u.id
+        WHERE 1=1
+        AND (grade = '25级' OR grade = '24级')
+        <choose>
+            <when test="name != null and name != ''">
+                AND u.name LIKE CONCAT('%', #{name}, '%')
+            </when>
+            <when test="className != null and className != ''">
+                AND u.class_name LIKE CONCAT('%', #{className}, '%')
+            </when>
+            <when test="status != null and status != ''">
+                AND a.status = #{status}
+            </when>
+        </choose>
+        ORDER BY u.id
+    </select>
+    <select id="findByDateBetween" resultType="com.feng.entity.Attendance">
+        SELECT * FROM attendance
+        WHERE attendance_time &gt;= #{startTime} AND attendance_time &lt;= #{endTime}
+
+    </select>
+</mapper>

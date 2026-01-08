@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.feng.dao.NewUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.feng.entity.NewUser">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="sex" property="sex" />
+        <result column="class_name" property="className" />
+        <result column="grade" property="grade" />
+        <result column="score" property="score" />
+        <result column="introduce" property="introduce" />
+        <result column="create_time" property="createTime" />
+        <result column="user_type_id" property="userTypeId" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <resultMap id="infoResultMap" type="com.feng.vo.NewUserInfoVo">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="introduce" property="introduce" />
+        <result column="create_time" property="createTime" />
+        <result column="user_type_id" property="userTypeId" />
+        <result column="status" property="status" />
+        <association property="newUserType" javaType="com.feng.entity.NewUserType">
+            <id column="user_type_id" property="id"/>
+            <result column="type" property="type"/>
+        </association>
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name,sex, class_name, grade, score, introduce, create_time, user_type_id, status
+    </sql>
+
+    <delete id="batchDelete">
+        DELETE FROM new_user
+        <where>
+            <if test="name != null and name != ''">
+                AND name = #{name}
+            </if>
+            <if test="className != null and className != ''">
+                AND class_name = #{className}
+            </if>
+            <if test="score != null">
+                AND score &lt; #{score}
+            </if>
+        </where>
+    </delete>
+
+    <select id="findNewUser" resultMap="infoResultMap" parameterType="com.feng.entity.NewUser">
+        SELECT
+        c.*,
+        ct.type
+        FROM
+        new_user c
+        INNER JOIN new_user_type ct ON c.user_type_id = ct.id
+        WHERE 1 > 0
+        <if test="userTypeId !=null ">
+            AND c.user_type_id = #{userTypeId}
+        </if>
+        <if test="name != null and name != '' ">
+            AND c.name LIKE CONCAT('%', #{name},'%')
+        </if>
+    </select>
+
+    <select id="selectAllWithVo" resultType="com.feng.vo.NewUserInfoVo"
+            parameterType="com.feng.entity.NewUser">
+        SELECT id, name, sex, class_name, grade, score, account, create_time
+        FROM new_user
+        ORDER BY id
+    </select>
+
+    <select id="searchByCondition" resultType="com.feng.vo.NewUserInfoVo"
+            parameterType="com.feng.entity.NewUser">
+        SELECT id, name, sex, class_name, grade, score, account, create_time
+        FROM new_user
+        <where>
+            <if test="name != null and name != ''">
+                AND name LIKE CONCAT('%', #{name}, '%')
+            </if>
+            <if test="className != null and className != ''">
+                AND class_name LIKE CONCAT('%', #{className}, '%')
+            </if>
+            <if test="score != null">
+                AND score >= #{score}
+            </if>
+        </where>
+        ORDER BY id
+    </select>
+    <select id="getInfoById" resultType="com.feng.entity.NewUser" parameterType="java.lang.Long">
+        select * from new_user where id=#{id}
+    </select>
+
+
+</mapper>
