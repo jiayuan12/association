@@ -24,14 +24,11 @@ import java.util.Map;
  * <p>
  * 前端控制器
  * </p>
- *
- * @author rf
- * @since 2019-03-03
  */
 @RestController
 @CrossOrigin
 @RequestMapping("/activities")
-@Api(tags  = "社团管理系统后台活动管理接口",value = "社团管理系统后台活动管理接口")
+@Api(tags  = "协会管理系统后台活动管理接口",value = "协会管理系统后台活动管理接口")
 public class ActivityController {
     @Autowired
     private ActivityService activityService;
